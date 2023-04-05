@@ -4,7 +4,7 @@
 <div align="center">
   
   <a href="https://github.com/nouraalsultan/ExpRestaurant">
-    <img src="/imgs/logo.jepg” alt="Logo" width="500" height="400">
+    <img src="imgs/logo.jpeg” alt="Logo" width="500" height="400">
   </a>
 
 </div>
