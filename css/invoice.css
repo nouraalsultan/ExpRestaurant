@@ -1,0 +1,21 @@
+.total-cost-label{
+    font-weight: bold;
+    font-size: 25px;
+}
+.total-cost-number{
+    font-size: 28px;
+}
+.under-table{
+    display: flex;
+    justify-content: space-between;
+}
+.under-table .print{
+    cursor: pointer;
+}
+.print-word{
+    font-weight: bold;
+    font-size: 23px;
+}
+table , th , td{
+    border: 1px solid black;
+}

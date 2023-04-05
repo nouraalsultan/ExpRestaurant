@@ -1,0 +1,71 @@
+.main-course .meal{
+    display: flex;
+    align-items: center;
+}
+.main-course .meal .img{
+    width:600px;
+}
+.main-course .meal .img img{
+    width: 100%;
+    height: auto;
+}
+.main-course .meal .txt {
+    width: 600px;
+    padding:40px
+}
+
+.main-img{
+    text-align: center;
+}
+.appetizer {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.appetizer .meal {
+    width: 30%;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    
+}
+.appetizer .meal .img{
+    width: 330px;
+    height:300px;
+    
+}
+.appetizer .meal .img img{
+    width: 100%;
+    height: 100%;
+    margin-right: 10%;
+}
+.meal .txt .price {
+    font-weight: bold;
+    color: #2A2A72;
+    
+}
+.meal .txt {
+    font-weight: bold;
+    margin-right: 15%;
+    
+}
+
+.drinks .meal{
+    display: flex;
+    margin-bottom: 30px;
+}
+.drinks .meal .txt{
+    width:600px;
+    padding:30px
+}
+.drinks .meal .img{
+    width: 500px;
+    height:300px
+}
+.drinks .meal .img img{
+    width: 100%;
+    height: 100%;
+}

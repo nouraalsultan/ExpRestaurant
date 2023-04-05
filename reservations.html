@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations</title>
+
+    <link rel="stylesheet" href="css/reservations.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="imgs/logo.jpeg" alt="Logo" />
+          <div class="logo-txt">
+            <span>expRestaurant </span>
+            <div class="top-icons">
+              <a id="theme-1" href="#"><i class=""></i></a>
+              <a id="theme-2" href="#"><i class="active-item"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="links">
+          <div class="left-part">
+            <a href="index.html" accesskey="h">Home</a>
+            <a href="staff.html" accesskey="s">Staff</a>
+            <a class="active" href="reservations.html" accesskey="r"
+              >Reservations</a
+            >
+            <a href="menu.html" accesskey="m">Menu</a>
+          </div>
+          <div class="order">
+            
+            <a href="order.html" accesskey="o">Order</a>
+          </div>
+        </div>
+      </nav>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> >> 
+        <a href="reservations.html">Reservations</a>
+        
+    </div>
+    <hr>
+      <main>
+
+        <h2 class="title-2">Table Reservation</h2>
+        <hr class="under-title" />
+        <form name="mtform" onsubmit="return validateReservation()" method="post">
+          <fieldset>
+            <legend id="mylegend">Customer Information</legend>
+        <div class="reservation" id="reservation">
+          <div class="date">
+            <label>Date</label>
+            <input type="date" required value="" />
+          </div>
+          <div class="people">
+            <label>People</label>
+            <input type="number" min="1" required value="1" />
+          </div>
+          
+          <div class="time">
+            <label>Time</label>
+            <input type="time" required value="" />
+          </div>
+
+          <div class="cname">
+            <label>Name</label>
+            <input type="text" required value="" />
+          </div>
+          <div class="cphone">
+            <label>Phone</label>
+            <input type="text" required value="" />
+          </div>
+
+         
+                <div class="btn">                    
+                    <button id="check_button">Reserve</button>
+                </div>
+                
+        </div>
+      </fieldset>
+      </form><br>
+        
+
+        <br><section class="tables">
+          <div id="table_1" class="table">
+            <h4>Table 1</h4>
+            <img src="imgs/table11.jpeg" alt="" />
+            <div class="image2">
+              <img src="imgs/table 1 .png" alt="Location: upper left corner" />
+            </div>
+
+            <h6>
+              Capacity: 4<br /><br />
+              Location: inside<br /><br />
+              Availability: <span>YES</span>
+            </h6>
+          </div>
+
+          <div id="table_2" class="table">
+            <h4>Table 2</h4>
+            <img src="imgs/table22.jpg" alt="" />
+            <div class="image2">
+              <img src="imgs/table2.png" alt="Location: upper middle" />
+            </div>
+
+            <h6>
+              Capacity: 10<br /><br />
+              Location: inside<br /><br />
+              Availability: <span>YES</span>
+            </h6>
+          </div>
+
+          <div id="table_3" class="table">
+            <h4>Table 3</h4>
+            <img src="imgs/table33.jpeg" alt="" />
+            <div class="image2">
+              <img src="imgs/table3.png" alt="Location: upper right corner" />
+            </div>
+
+            <h6>
+              Capacity: 4<br /><br />
+              Location: outside<br /><br />
+              Availability: <span>YES</span>
+            </h6>
+          </div>
+
+          <div id="table_4" class="table">
+            <h4>Table 4</h4>
+            <img src="imgs/table44.jpeg" alt="" />
+            <div class="image2">
+              <img src="imgs/table4.png" alt="Location: Lower left corner" />
+            </div>
+
+            <h6>
+              Capacity: 4<br /><br />
+              Location: inside<br /><br />
+              Availability: <span>YES</span>
+            </h6>
+          </div>
+
+          <div id="table_5" class="table">
+            <h4>Table 5</h4>
+            <img src="imgs/table55.jpeg" alt="" />
+            <div class="image2">
+              <img src="imgs/table5.png" alt="Location: lower middle" />
+            </div>
+
+            <h6>
+              Capacity: 8<br /><br />
+              Location: inside<br /><br />
+              Availability: <span>YES</span>
+            </h6>
+          </div>
+
+          <div id="table_6" class="table">
+            <h4>Table 6</h4>
+            <img src="imgs/table66.jpeg" alt="" />
+            <div class="image2">
+              <img src="imgs/table6.png" alt="Location: lower right corner" />
+            </div>
+
+            <h6>
+              Capacity: 2<br /><br />
+              Location: outside<br /><br />
+              Availability: <span>YES</span>
+            </h6>
+          </div>
+        </section>
+      </main>
+      <hr />
+      <footer class="footer">
+        <div class="contact-us">
+          <h2 class="title-2">Contact Us</h2>
+          <p>
+            You can call us on the following number :
+            <span class="phone-number"> +966 123456798</span>
+          </p>
+          <p class="rights">@2021 expRestaurant , ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="social-media">
+          <h2 class="title-2">Social Media</h2>
+          <div class="social-media-links">
+            <a href="https://www.facebook.com/">
+              <img src="imgs/social-media/facebook.png" alt="facebook" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src="imgs/social-media/instagram.png" alt="instagram" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      for (var i = 0; i < localStorage.length; i++) {
+        if (localStorage.key(i).includes("reservation_")) {
+            var table_nam = localStorage.key(i).replace("reservation_", "");
+            $("#table_" + table_nam).find("span").text("NO");
+            $("#table_" + table_nam).addClass("reserved_table");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/order.css" />
+    <link rel="stylesheet" href="css/invoice.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+                <img src="imgs/logo.jpeg" alt="Logo">
+                <div class="logo-txt">
+                    <span>expRestaurant </span>
+                    <div class="top-icons">
+                        <a id="theme-1" href="#"><i class=""></i></a> <a id="theme-2" href="#"><i class="active-item"></i></a>
+                     </div>
+                </div>
+            </div>
+        <div class="links">
+          <div class="left-part">
+            <a href="index.html" accesskey="h">Home</a>
+            <a href="staff.html" accesskey="s">Staff</a>
+            <a href="reservations.html" accesskey="r">Reservations</a>
+            <a href="menu.html" accesskey="m">Menu</a>
+          </div>
+          <div class="order">
+            <img src="imgs/cart.png" alt="cart image" />
+            <a href="order.html" accesskey="o">Order</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="breadcrumb">
+        <a href="order.html">Order</a> >>
+        <a href="invoice.html">Invoice</a>
+      </div>
+      <hr />
+      <main id="invoices">
+        <!--
+        <div class="order-invoice">
+          <h2 class="title-2">Invoice Table (1)</h2>
+          <hr />
+          <div class="order-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Meal name</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="meal">
+                      <div class="meal-name">Little House Salad</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="quantity">
+                      <div class="quantity-text">1</div>
+                    </div>
+                  </td>
+                  <td>SAR 29.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="meal">
+                      <div class="meal-name">Pineapple Cherry Limeade</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="quantity">
+                      <div class="quantity-text">2</div>
+                    </div>
+                  </td>
+                  <td>SAR 54.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="meal">
+                      <div class="meal-name">Coconut Limeade</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="quantity">
+                      <div class="quantity-text">1</div>
+                    </div>
+                  </td>
+                  <td>SAR 29.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="meal">
+                      <div class="meal-name">Chicken Parmesan "Pizza Style</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="quantity">
+                      <div class="quantity-text">1</div>
+                    </div>
+                  </td>
+                  <td>SAR 85.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="under-table">
+            <div class="total-cost">
+              <span class="total-cost-label">Total Cost : </span>
+              <span class="total-cost-number">SAR 197.00</span>
+            </div>
+            <div class="print">
+              <p class="print-word">Print</p>
+              <img src="imgs/icons/print.png" alt="print.png" />
+            </div>
+          </div>
+        </div>
+        -->
+      </main>
+      <hr />
+      <footer class="footer">
+        <div class="contact-us">
+          <h2 class="title-2">Contact Us</h2>
+          <p>
+            You can call us on the following number :
+            <span class="phone-number"> +966 123456798</span>
+          </p>
+          <p class="rights">@2021 expRestaurant , ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="social-media">
+          <h2 class="title-2">Social Media</h2>
+          <div class="social-media-links">
+            <a href="https://www.facebook.com/">
+              <img src="imgs/social-media/facebook.png" alt="facebook" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src="imgs/social-media/instagram.png" alt="instagram" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <tr>
+      <td>
+        <div class="meal">
+          <div class="meal-name">Little House Salad</div>
+        </div>
+      </td>
+      <td>
+        <div class="quantity">
+          <div class="quantity-text">1</div>
+        </div>
+      </td>
+      <td>SAR 29.00</td>
+    </tr>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var results = getInvoiceData();
+
+        $(".print").click(function () {
+          var invoice = $(this).closest(".order-invoice");
+          $(this).remove();
+
+          var newWin = window.open("", "Print-Window");
+
+          newWin.document.open();
+
+          newWin.document.write(
+            '<html><body onload="window.print()">' +
+              invoice.html() +
+              "</body></html>"
+          );
+
+          newWin.document.close();
+
+          setTimeout(function () {
+            newWin.close();
+          }, 10);
+
+          localStorage.removeItem(invoice.attr("id"));
+          localStorage.removeItem(
+            invoice.attr("id").replace("order_", "reservation_")
+          );
+
+          invoice.remove();
+        });
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+select{
+    padding:5px 20px;
+    margin-bottom: 30px;
+    
+}
+.table-number-div{
+    margin-left: 30px;
+}
+.table-number-div p{
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.order-table table{
+    text-align: center;
+   
+    margin: auto;
+    width: 70%;
+    margin-bottom: 30px;
+}
+.order-table table tr:nth-child(2n-1) {
+    background: #8abbd8
+}
+.order-table > table > thead > tr {
+    background: #EAF6FF !important
+}
+.order-table table th,.order-table table td {
+    padding:10px;
+    width:30%;
+}
+.catg {
+    font-size: 24px;
+    font-weight: normal; 
+    text-align: center;
+    background: #d1c7b4
+}
+.meal{
+    display: flex;
+    align-items: center;
+    
+
+    
+}
+
+.quantity{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.quantity .quantity-text{
+    font-size: 25px;
+    font-weight: normal;
+}
+.quantity .minus , .quantity .plus{
+    cursor: pointer;
+}
+
+caption{
+    font-size: 40px;
+    font-weight: bold; 
+    text-align: center;
+    color: #080808;
+}
+table , th , td{
+    border: 1px solid black;
+    
+}
+.pay {
+    width:300px;
+    margin:auto;
+    padding:20px;
+    border:1px solid #2A2A72;
+    text-align: center;
+
+    padding:10px 20px;
+    border:none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #d1c7b4;
+    width:200px
+}
+th{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
+
+.catg button {
+    float: right;
+}
+
+
+
+
+.total-cost-label{
+    font-weight: bold;
+    font-size: 25px;
+}
+.total-cost-number{
+    font-size: 28px;
+}
+.under-table{
+    display: flex;
+    justify-content: space-between;
+}
+.under-table .print{
+    cursor: pointer;
+}
+.print-word{
+    font-weight: bold;
+    font-size: 23px;
+}
+table , th , td{
+    border: 1px solid black;
+}
